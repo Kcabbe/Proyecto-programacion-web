@@ -1,0 +1,34 @@
+.ingresar 
+{
+    height: 27px;
+    width: 200px;
+    background-color: #0d6efd;
+    border-color: #0d6efd;   
+    text-align: center;   
+}
+
+.ingresar a
+{
+    color: white;
+    text-decoration: none;
+}
+
+.table
+{
+    margin-top: 20px;
+    color: black;
+    font-size: large;
+}
+
+
+.btn-primary
+{
+    margin-top: 20px;
+
+}
+
+.titulo
+{
+    padding-top: 30px;
+}
+

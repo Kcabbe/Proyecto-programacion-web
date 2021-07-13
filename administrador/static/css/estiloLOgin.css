@@ -1,0 +1,143 @@
+body
+{
+    margin: 0;
+    padding: 0%;
+    /*background: url(../Prueba-1/ImgJavier/FondoBeige.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: beige;
+    font-family: sans-serif;
+}
+
+.login-box
+{
+    width: 320px;
+    height: 420px;
+    background: rgba(0, 0, 0, 0.89);
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+}
+
+.login-box .avatar
+{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: -70px;
+    left: calc(50% - 50px);
+}
+
+.login-box h1
+{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: left;
+    font-size: 34px;
+}
+
+.login-box label
+{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    display: block;
+}
+
+.login-box input
+{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"]
+{
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+}
+
+.login-box input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: beige;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.login-box a
+{
+    text-decoration: none;
+    font-size: 17px;
+    line-height: 20px;
+    color: darkgray;
+}
+
+.login-box a:hover
+{
+    color: white;
+}
+
+body
+{
+    background-color: beige;
+}
+
+.menu
+{
+    list-style: none;
+    padding: 0;
+    background-color: antiquewhite;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.menu li a
+{
+    text-decoration: none;
+    color: black;
+    padding: 30px;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+.menu li
+{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover
+{
+    background-color: azure;
+}
+
+.logo
+{
+    width: 200px;
+    height: 150px;
+
+}
+
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: antiquewhite;
+}

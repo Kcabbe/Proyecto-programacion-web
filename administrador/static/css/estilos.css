@@ -1,0 +1,172 @@
+body
+{
+    background-color: beige;
+}
+
+.menu
+{
+    list-style: none;
+    padding: 0;
+    background-color: antiquewhite;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.menu li a
+{
+    text-decoration: none;
+    color: black;
+    padding: 30px;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 550;
+}
+
+.menu li
+{
+    display: inline-block;
+    text-align: center;
+}
+
+.menu li a:hover
+{
+    background-color: azure;
+}
+
+.logo
+{
+    width: 200px;
+    height: 150px;
+
+}
+
+nav
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: antiquewhite;
+}
+
+h5
+{
+    font-size: xx-large;
+}
+
+p
+{
+    font-size: large;
+}
+
+.buscar
+{
+    padding: 5px;
+    float: right;
+}
+
+.buscar input
+{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: 1px solid silver;
+    outline: none;
+}
+
+.login
+{
+    color: black;
+}
+.centrado{
+    text-align: center;
+    
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.container .card{
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0,0,0, 0.2);
+    overflow: hidden;
+    margin: 20px;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);   
+}        
+
+.container .card img{
+    width: 330px;
+    height: 220px;
+}
+
+.container .card h4{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container .card p{
+    padding: 0 1rem;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.container .card a {
+    font-weight: 500;
+    text-decoration: none;
+    color: #3498db;
+    
+}
+.titulonoticias{
+    text-align: left;
+
+}
+.contenedor-noticias{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.imagen-about-us{
+    width: 40%;
+}
+.contenedor-noticias .contenedor-textos{
+    width: 40%;
+
+}
+.contenedor-textos p{
+    font-size: 115%;
+}
+
+.buscar input
+{
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    border-radius: 30px;
+    border: 1px solid silver;
+    outline: none;
+}
+
+.buscar
+{
+    padding: 5px;
+    float: right;
+}

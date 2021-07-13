@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="validationEngine.jquery.css" type="text/css"/>
+    <title>Formulario</title>
+</head>
+<body>
+  <div class="container">
+      <div class="row">
+            <h1>Coordenadas usando api</h1>
+      </div>
+      <div class="row">
+           <button class="btn btn-primary" id="boton1">Obtener Clima</button> 
+      </div>
+
+
+      <div class="row">
+            <table class="table" id="tabla1">
+                <tr>
+                    <td>Ciudad</td>
+                    <td>Tem Min</td>
+                    <td>Tem Act</td>
+                    <td>Icono</td>
+                </tr>
+            </table>
+      </div>
+
+  </div>
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+<script src="js/jquery.validationEngine-es.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
+
+<script>
+
+    $(document).ready(function(){
+
+        $("#boton1").click(
+            function()
+            {                                                                                                                                                                                                 
+                getLocation();
+            }
+        );
+
+    });
+
+    function getLocation(){
+        if (navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else{
+           // x.innerHTML = "Geolocation is not supported by this browser."                    
+        }
+    }
+
+    function showPosition(position){
+        $("#longitud").html("#Longitud: " + position.coords.longitude);
+        $("#latitud").html("#Latitud: " + position.coords.latitude);
+        
+        $.get("http://api.openweathermap.org/data/2.5/weather?units=metric&lat=" + position.coords.latitude + "&lon=" + position.coords.longitude + "&appid=e62a1f0a279a61e8305fd79314dc74bd",
+            function(data){
+
+                $("#tabla1").append(
+                    "<tr>"+
+                        "<td>" + data.name + "</td>"+
+                        "<td>" + data.main.temp_min + "C" + "</td>"+
+                        "<td>" + data.main.temp +  "C" + "</td>"+
+                        "<td>" + "<img src=" + "http://openweathermap.org/img/wn/02d@2x.png" + ">" + "</td>"+ 
+                    "</tr>"
+                    );
+
+            });
+
+
+    }
+
+
+</script>
+
+</html>
